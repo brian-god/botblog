@@ -5,7 +5,7 @@
  * Date: 2018/7/25
  * Time: 16:33
  */
-function auto_load_tpl($tplName)
+function blog_load_tpl($tplName)
 {
     global $bbsList;    //论坛帖子列表
     global $bbsListPage;//论坛帖子列表分页html
@@ -17,7 +17,7 @@ function auto_load_tpl($tplName)
     global $pUserList;  //论坛发帖人用户信息
 
     //自动加载模板
-    include 'view/tpl/'.$tplName.'_tpl.php';
+    include 'view/tpl/'.$tplName.'.php';
 }
 //连接数据库，使用频繁，每次调用数据，就会使用。
 // TP3 查询语句写法。
@@ -32,4 +32,36 @@ function db_connect($db)
         die("Connection failed: " . mysqli_connect_error());
     }
     return $conn;
+}
+/**
+ * 查询所有的贴子
+ */
+function findAll($db,$actionName){
+    //获取数据库连接
+    $db =db_connect($db);
+    //SQL语句
+    $sql ='select * from ' . $actionName .' where dr=0 limit 0,5';
+    //定义储存数据的数组s
+    $rows=[];
+    //执行查询
+    if($result=mysqli_query($db,$sql)){
+        /**
+         *函数从结果集中取得一行作为关联数组。
+         * 返回根据从结果集取得的行生成的关联数组，如果没有更多行，则返回 false
+         */
+        $rows = mysqli_fetch_assoc($result);
+        /**
+         * mysql_free_result() 函数释放结果内存。
+         * 如果成功，则返回 true，如果失败，则返回 false。
+         */
+        mysqli_free_result($result);
+    }
+    /**
+     * 关闭MySQL数据连接
+     */
+    mysqli_close($db);
+    /**
+     * 返回查询的结果集
+     */
+    return $rows;
 }
