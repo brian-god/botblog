@@ -28,4 +28,9 @@ global  $BLOG_TITLE;//声明项目的标题文件
 $BLOG_TITLE='个人博客';
 //获取模板名称
 $tplName = isset($_GET["a"])?$_GET["a"]:"list";
-
+//对于action的加载
+switch ($tplName){
+    case 'list':
+        //加载listAction
+        include 'controller/listAction.php';break;
+}

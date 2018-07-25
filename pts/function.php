@@ -19,3 +19,17 @@ function auto_load_tpl($tplName)
     //自动加载模板
     include 'view/tpl/'.$tplName.'_tpl.php';
 }
+//连接数据库，使用频繁，每次调用数据，就会使用。
+// TP3 查询语句写法。
+// M('Forum_bbs')->field(true)->where(array('status'=>1))->find();
+function db_connect($db)
+{
+    // 创建连接
+    $conn = mysqli_connect($db['db_host'], $db['db_user'], $db['db_pass'],$db['db_name']);
+
+    // 检测连接
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    return $conn;
+}
