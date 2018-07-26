@@ -9,7 +9,7 @@
             <!--正文部分-->
             <div class="blog-post">
                 <?php
-                    foreach ($forum_bbs as $Article){
+                    foreach ($bbsAll as $Article){
                         echo '<p>';
                         echo $Article['bbs_content'];
                         echo '</p>';
@@ -46,10 +46,10 @@
                     <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
                     <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
                 </ol>
-                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>-->
-            </div><!-- /.blog-post -->
-            <!--右侧说明部分-->
-            <div class="blog-post">
+                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            </div>--><!-- /.blog-post -->
+
+            <!--<div class="blog-post">
                 <h2 class="blog-post-title">Another blog post</h2>
                 <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
@@ -59,9 +59,9 @@
                 </blockquote>
                 <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
                 <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            </div><!-- /.blog-post -->
+            </div>--><!-- /.blog-post -->
 
-            <div class="blog-post">
+            <!--<div class="blog-post">
                 <h2 class="blog-post-title">New feature</h2>
                 <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
 
@@ -73,9 +73,9 @@
                 </ul>
                 <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
                 <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            </div><!-- /.blog-post -->
+            </div>--><!-- /.blog-post -->
 
-            <nav class="blog-pagination">
+           <nav class="blog-pagination">
                 <a class="btn btn-outline-primary" href="#">Older</a>
                 <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
             </nav>

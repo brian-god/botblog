@@ -25,7 +25,7 @@ $db = array(
     'db_name' => 'forum'
 );
 /*博客表名*/
-$forum_name ='forum_bbs';
+$blog_name ='forum_bbs';
 global  $BLOG_TITLE;//声明项目的标题文件
 $BLOG_TITLE='个人博客';
 //获取模板名称

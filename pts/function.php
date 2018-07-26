@@ -25,7 +25,7 @@ function blog_load_tpl($tplName)
 function db_connect($db)
 {
     // 创建连接
-    $conn = mysqli_connect($db['db_host'], $db['db_user'], $db['db_pass'],$db['db_name']);
+    $conn  = new mysqli($db['db_host'], $db['db_user'], $db['db_pass'], $db['db_name']);
 
     // 检测连接
     if (!$conn) {
@@ -38,18 +38,21 @@ function db_connect($db)
  */
 function findAll($db,$actionName){
     //获取数据库连接
-    $db =db_connect($db);
+    $mysql =db_connect($db);
     //SQL语句
     $sql ='select * from ' . $actionName .' where dr=0 limit 0,5';
     //定义储存数据的数组s
     $rows=[];
     //执行查询
-    if($result=mysqli_query($db,$sql)){
+    if($result=mysqli_query($mysql,$sql)){
         /**
          *函数从结果集中取得一行作为关联数组。
          * 返回根据从结果集取得的行生成的关联数组，如果没有更多行，则返回 false
          */
-        $rows = mysqli_fetch_assoc($result);
+        while($row = mysqli_fetch_assoc($result)){
+            //将返回的行数组放入到待返回数组
+            $rows[] = $row;
+        }
         /**
          * mysql_free_result() 函数释放结果内存。
          * 如果成功，则返回 true，如果失败，则返回 false。
@@ -59,7 +62,7 @@ function findAll($db,$actionName){
     /**
      * 关闭MySQL数据连接
      */
-    mysqli_close($db);
+    $mysql->close();
     /**
      * 返回查询的结果集
      */
