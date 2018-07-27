@@ -14,6 +14,9 @@
     <link href="static/custom/css/botblog.min.css" rel="stylesheet">
     <!--图标样式-->
     <link rel="stylesheet" type="text/css" href="static/font-awesome/css/font-awesome.css" />
+    <!--文章展示样式-->
+    <link rel="stylesheet" type="text/css" href="static/custom/css/txk.comment.css" />
+    <link rel="stylesheet" type="text/css" href="static/custom/css/txk.core.css" />
 </head>
 
 <body class="bg-light" id="body">
@@ -28,7 +31,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <div class="navbar-collapse offcanvas-collapse top-menu-box" id="navbarsExampleDefault">
             <div class="menu-box">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">

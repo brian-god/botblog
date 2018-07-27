@@ -10,3 +10,4 @@ include  'pts/function.php';
 //设置模板名称
 $tplName='list_tpl';
 //查询返回的文章集合
+$bbsList = findAll($db,$blog_name);

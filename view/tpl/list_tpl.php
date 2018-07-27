@@ -9,14 +9,42 @@
             <!--正文部分-->
             <div class="blog-post">
                 <?php
-                    foreach ($bbsAll as $Article){
-                        echo '<p>';
-                        echo $Article['bbs_content'];
-                        echo '</p>';
-                        echo '<hr/>';
-                    }
+                    foreach ($bbsList as $Article){
                 ?>
-
+                        <article class="fade-in">
+                            <figure class="thumbnail">
+                                <a href="http://www.luxiaosong.top//article/3">
+                                    <img width="150" height="150" data-original="http://pa8no1gcc.bkt.clouddn.com/zhyd/cover/20180719135948511.jpg-img_150x150" class="img-responsive lazy-img" alt="JSP使用JSTL进行日期比较" src="./爱撸码的喵 _ 一个程序员的个人博客_files/20180719135948511.jpg-img_150x150" style="display: block;">
+                                </a>
+                                <span class="cat"><a href="http://www.luxiaosong.top//type/2">前端技术</a></span>
+                            </figure>
+                            <header class="entry-header">
+                                <h2 class="entry-title">
+                                    <a href="http://www.luxiaosong.top//article/3" rel="bookmark" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="点击查看文章详情">JSP使用JSTL进行日期比较</a>
+                                </h2>
+                            </header>
+                            <div class="entry-content">
+                                <div class="archive-content">
+                                    <?php echo $Article['bbs_title']?>
+                                </div>
+                                <span class="title-l"></span>
+                                <span class="entry-meta">
+                                    <span class="date" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="文章发表日期"><i class="fa fa-calendar-o fa-fw"></i>2018-07-19</span>
+                                    <span class="views" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="文章阅读次数"><i class="fa fa-eye fa-fw"></i>浏览(50)</span>
+                                    <span class="comment" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="文章评论次数">
+                                        <a href="http://www.luxiaosong.top//article/3#comment-box" rel="external nofollow">
+                                            <i class="fa fa-comments-o fa-fw"></i>评论(0)
+                                        </a>
+                                    </span>
+                                </span>
+                                <div class="clear"></div>
+                                <span class="entry-more">
+                                    <a href="http://www.luxiaosong.top//article/3" rel="bookmark" title="" data-toggle="tooltip" data-placement="bottom" data-original-title="点击查看文章详情">阅读全文</a>
+                                </span>
+                            </div>
+                        </article>
+                <?php }?>
+            </div>
                 <!--<h2 class="blog-post-title">Sample blog post</h2>
                 <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
@@ -61,7 +89,7 @@
                 <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             </div>--><!-- /.blog-post -->
 
-            <!--<div class="blog-post">
+            <!--div class="blog-post">
                 <h2 class="blog-post-title">New feature</h2>
                 <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
 

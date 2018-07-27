@@ -1,5 +1,5 @@
 <footer class="blog-footer">
-<div class="footer">
+<div class="my_footer">
     <div class="row">
         <!--左侧占位-->
         <div class=" col-xs-12 col-sm-1 col-md-1 footer-div" ></div>

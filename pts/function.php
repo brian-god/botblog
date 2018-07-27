@@ -15,7 +15,6 @@ function blog_load_tpl($tplName)
     global $comment;    //论坛评论列表
     global $userList;   //论坛当前用户信息
     global $pUserList;  //论坛发帖人用户信息
-
     //自动加载模板
     include 'view/tpl/'.$tplName.'.php';
 }
